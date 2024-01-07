@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
                   color: Color.fromARGB(255, 12, 136, 194),
                   margin: EdgeInsets.all(2),
                 )),*/
-        body: Stack(
+        /*  body: Stack(
           alignment: Alignment.bottomRight,
           children: [
             Container(
@@ -99,6 +99,20 @@ class MyApp extends StatelessWidget {
               color: Colors.deepPurple[200],
             ),
           ],
+        ),*/
+        body: Center(
+          child: GestureDetector(
+              onTap: () {
+                print("user tapped");
+              },
+              child: Container(
+                height: 250,
+                width: 250,
+                color: Colors.deepPurple,
+                child: Center(
+                  child: Text("tap"),
+                ),
+              )),
         ),
       ),
     );
