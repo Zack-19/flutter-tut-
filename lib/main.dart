@@ -27,15 +27,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Colors.blue,
-          appBar: AppBar(
-            title: Text("app bar"),
-            backgroundColor: Colors.redAccent,
-            leading: Icon(Icons.menu),
-            elevation: 0,
-            actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
-          ),
-          /*body: Center(
+        backgroundColor: Colors.blue,
+        appBar: AppBar(
+          title: Text("app bar"),
+          backgroundColor: Colors.redAccent,
+          leading: Icon(Icons.menu),
+          elevation: 0,
+          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
+        ),
+        /*body: Center(
           child: Container(
             height: 250,
             width: 250,
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),*/
-          /*body: ListView(
+        /*body: ListView(
           scrollDirection: Axis.horizontal,
           children: [
             Container(
@@ -72,11 +72,15 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),*/
-          body: ListView.builder(
-              itemCount: names.length,
-              itemBuilder: (context, index) => ListTile(
-                    title: Text(names[index]),
-                  ))),
+        body: GridView.builder(
+            itemCount: 64,
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
+            itemBuilder: (context, index) => Container(
+                  color: Color.fromARGB(255, 12, 136, 194),
+                  margin: EdgeInsets.all(2),
+                )),
+      ),
     );
   }
 }
