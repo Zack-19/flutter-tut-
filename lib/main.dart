@@ -4,27 +4,38 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  MyApp({super.key});
+  List names = [
+    'John',
+    'Emily',
+    'Michael',
+    'Sophia',
+    'Daniel',
+    'Olivia',
+    'Matthew',
+    'Emma',
+    'Andrew',
+    'Ava',
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.blue,
-        appBar: AppBar(
-          title: Text("app bar"),
-          backgroundColor: Colors.redAccent,
-          leading: Icon(Icons.menu),
-          elevation: 0,
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
-        ),
-        /*body: Center(
+          backgroundColor: Colors.blue,
+          appBar: AppBar(
+            title: Text("app bar"),
+            backgroundColor: Colors.redAccent,
+            leading: Icon(Icons.menu),
+            elevation: 0,
+            actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
+          ),
+          /*body: Center(
           child: Container(
             height: 250,
             width: 250,
@@ -41,7 +52,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),*/
-        body: ListView(
+          /*body: ListView(
           scrollDirection: Axis.horizontal,
           children: [
             Container(
@@ -60,8 +71,12 @@ class MyApp extends StatelessWidget {
               color: Colors.deepPurple[200],
             ),
           ],
-        ),
-      ),
+        ),*/
+          body: ListView.builder(
+              itemCount: names.length,
+              itemBuilder: (context, index) => ListTile(
+                    title: Text(names[index]),
+                  ))),
     );
   }
 }
