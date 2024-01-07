@@ -44,21 +44,18 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 150,
-              width: 150,
+            Expanded(
+                child: Container(
               color: Colors.deepPurple,
-            ),
-            Container(
-              height: 100,
-              width: 100,
+            )),
+            Expanded(
+                child: Container(
               color: Colors.deepPurple[400],
-            ),
-            Container(
-              height: 50,
-              width: 50,
+            )),
+            Expanded(
+                child: Container(
               color: Colors.deepPurple[200],
-            ),
+            )),
           ],
         ),
       ),
