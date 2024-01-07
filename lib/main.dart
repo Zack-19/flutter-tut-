@@ -49,9 +49,10 @@ class MyApp extends StatelessWidget {
               color: Colors.deepPurple,
             )),
             Expanded(
+                flex: 2,
                 child: Container(
-              color: Colors.deepPurple[400],
-            )),
+                  color: Colors.deepPurple[400],
+                )),
             Expanded(
                 child: Container(
               color: Colors.deepPurple[200],
