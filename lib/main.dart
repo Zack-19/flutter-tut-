@@ -72,14 +72,34 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),*/
-        body: GridView.builder(
+        /*       body: GridView.builder(
             itemCount: 64,
             gridDelegate:
                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
             itemBuilder: (context, index) => Container(
                   color: Color.fromARGB(255, 12, 136, 194),
                   margin: EdgeInsets.all(2),
-                )),
+                )),*/
+        body: Stack(
+          alignment: Alignment.bottomRight,
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple,
+            ),
+            Container(
+              height: 150,
+              width: 150,
+              color: Colors.deepPurple[400],
+            ),
+            Container(
+              height: 50,
+              width: 50,
+              color: Colors.deepPurple[200],
+            ),
+          ],
+        ),
       ),
     );
   }
