@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:app_2/pages/fs_page.dart';
+import 'package:app_2/pages/sec_page.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:flutter/rendering.dart';
 
 void main() {
@@ -25,8 +28,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+        debugShowCheckedModeBanner: false,
+        /*home: Scaffold(
         backgroundColor: Colors.blue,
         appBar: AppBar(
           title: Text("app bar"),
@@ -114,7 +117,10 @@ class MyApp extends StatelessWidget {
                 ),
               )),
         ),
-      ),
-    );
+      ),*/
+        home: FirstPage(),
+        routes: {
+          '/sec': (context) => SecondPage(),
+        });
   }
 }
