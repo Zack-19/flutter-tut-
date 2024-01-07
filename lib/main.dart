@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,23 +41,24 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),*/
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: ListView(
+          scrollDirection: Axis.horizontal,
           children: [
-            Expanded(
-                child: Container(
+            Container(
+              height: 250,
+              width: 250,
               color: Colors.deepPurple,
-            )),
-            Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.deepPurple[400],
-                )),
-            Expanded(
-                child: Container(
+            ),
+            Container(
+              height: 250,
+              width: 250,
+              color: Colors.deepPurple[400],
+            ),
+            Container(
+              height: 250,
+              width: 250,
               color: Colors.deepPurple[200],
-            )),
+            ),
           ],
         ),
       ),
