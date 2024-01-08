@@ -6,7 +6,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("HOME")),
+      // appBar: AppBar(title: const Text("HOME")),
+      // ignore: prefer_const_constructors
+      body: Center(
+        child: Text('home'),
+      ),
     );
   }
 }
