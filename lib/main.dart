@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:app_2/pages/fs_page.dart';
+import 'package:app_2/pages/home_page.dart';
 import 'package:app_2/pages/sec_page.dart';
+import 'package:app_2/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:flutter/rendering.dart';
@@ -121,6 +123,8 @@ class MyApp extends StatelessWidget {
         home: FirstPage(),
         routes: {
           '/sec': (context) => SecondPage(),
+          '/home': (context) => HomePage(),
+          '/settings': (context) => SettingsPage(),
         });
   }
 }
